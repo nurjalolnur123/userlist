@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    transition: .2s;
+}
+.container{
+    width: 1140px;
+    margin: 0 auto;
+}
+
+h3{
+    color: #fff;
+}
+p{
+    color: #fff;
+}
+.user{
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+.user:hover{
+    border-bottom: 1px solid #111;
+    background-color: #fff;
+}
+.user:hover p{
+    color: #111;
+}
+.user:hover h3{
+    color: #111;
+}
+.add{
+    padding: 10px;
+    width: 100%;
+}
+.add input{
+    background-color: #111;
+    border: none;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    padding: 5px;
+    font-size: 18px;
+    color: #fff;
+}
+.add input::placeholder{
+    color: #fff;
+}
+.add input:hover::placeholder{
+    color: #111;
+}
+.add input:hover{
+    color: #111;
+}
+.add input:hover{
+    background: #fff;
+}
+.add button{
+    border-radius: 15px;
+    border: 2px solid #fff;
+    outline: none;
+    padding: 5px;
+    font-size: 18px;
+    background: #111;
+    color: #fff;
+}
+.add button:hover{
+    color: #111;
+    background: #fff;
+    cursor: pointer;
+}
+body{
+    background-color: #111;
+}
+.error{
+    padding: 10px;
+    color: red;
+    background-color: darkred;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.error h3{
+    color: red;
+}
+.error:hover{
+    background-color: red;
+    cursor: pointer;
+}
+.error:hover h3{
+    color: darkred;
+}
+.success{
+    padding: 10px;
+    color: lime;
+    background-color: green;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.success h3{
+    color: lime;
+}
+.success:hover{
+    background-color: lime;
+    cursor: pointer;
+}
+.success:hover h3{
+    color: green;
+}
+#close{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #111;
+    font-size: 20px;
+}
+#close:hover{
+    opacity: .5;
+}

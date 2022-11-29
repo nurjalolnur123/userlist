@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock css %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="add">
+        <form action="{% url 'add_people'%}" method="POST">
+            {% csrf_token %}
+            <input type="text" placeholder="Ismingizni kiriting..." name="name" required>
+            <input type="text" placeholder="Yoshingizni kiritig... " name="age" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+{% for p in peoples %}
+    <div class="user">
+        <h3>{{p.name}}</h3>
+        <p>Yoshi: {{p.age}}</p>
+    </div>
+{% endfor %}
+
+{% if code == 'name' %}
+<div class="error">
+    <h3>Bu ism allaqachon mavjud!</h3>
+    <button id="close">✖</button>
+</div>
+
+{% endif %}
+{% if code == 'success' %}
+<div class="success">
+    <h3>Yangi foydalanuvchi muaffaqiyatli yaratildi!</h3>
+    <button id="close">✖</button>
+</div>
+
+{% endif %}
+</div>
+
+<script>
+    const closeBtn = document.querySelector('#close')
+
+
+    closeBtn.addEventListener('click', ()=>{
+        document.querySelector('.success').setAttribute('style','opacity: 0; position: absolute; top: -100px')
+    })
+</script>
+{% endblock content%}
